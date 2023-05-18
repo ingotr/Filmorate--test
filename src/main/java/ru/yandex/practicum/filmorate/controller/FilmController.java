@@ -74,7 +74,8 @@ public class FilmController {
         if (film.getDescription().length() >= 200 || film.getDescription().isBlank()) {
             log.warn(Constants.FILM_MAX_DESCRIPTION_LENGTH);
             throw new ValidationException(Constants.FILM_MAX_DESCRIPTION_LENGTH);
-        } isFilmReleaseDateNotEmpty(film);
+        }
+        isFilmReleaseDateNotEmpty(film);
     }
 
     private void isFilmReleaseDateNotEmpty(Film film) {
